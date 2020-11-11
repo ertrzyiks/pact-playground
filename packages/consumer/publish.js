@@ -1,10 +1,6 @@
-if (process.env.CI !== "true") {
-  console.log("skipping Pact publish as not on CI...")
-  process.exit(0)
-}
-
 const { Publisher } = require("@pact-foundation/pact")
 const path = require("path")
+const childProcess = require("child_process")
 
 const exec = command =>
   childProcess
@@ -19,8 +15,8 @@ const branch =
   process.env.TRAVIS_BRANCH || exec("git rev-parse --abbrev-ref HEAD")
 
 const opts = {
-  pactFilesOrDirs: [path.resolve(process.cwd(), "pacts")],
-  pactBroker: "https://localhost:9292",
+  pactFilesOrDirs: [path.resolve(process.cwd(), "pact", "pacts", "consumer-provider.json")],
+  pactBroker: "http://localhost:9292",
   consumerVersion: gitSha,
   tags: [branch],
 }
