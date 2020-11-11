@@ -1,0 +1,11 @@
+{
+  "name": "provider",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@pact-foundation/pact": "^9.13.0",
+    "express": "^4.17.1"
+  }
+}
