@@ -3,9 +3,12 @@ const axios = require("axios")
 console.log('----')
 axios.post('http://localhost:9292/pacts/provider/Provider/for-verification', {
   consumerVersionSelectors: [
-    {"tag": "production", "latest": true}
+    {
+      tag: 'production',
+      latest: true
+    }
   ],
-  includeWipPactsSince: "2020-11-09",
+  includeWipPactsSince: '2020-11-09',
   includePendingStatus: true,
   providerVersion: 'main'
 })
