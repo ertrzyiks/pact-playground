@@ -18,9 +18,9 @@ yarn consumer-pact
 ![](./images/first_test.png)
 ![](./images/first_test_matrix.png)
 
-after than 
+after than check the pacts for verification
 ```bash
-./wip_branches.sh
+yarn select
 ```
 
 returns no pacts

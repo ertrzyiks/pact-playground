@@ -5,7 +5,7 @@ let opts = {
   provider: 'Provider',
   pactBrokerUrl: 'http://localhost:9292',
   publishVerificationResult: true,
-  providerVersion: 'master',
+  providerVersion: 'main',
   verbose: true,
   includeWipPactsSince: '2020-11-10',
   enablePending: true,

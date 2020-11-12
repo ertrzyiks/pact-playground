@@ -1,0 +1,13 @@
+{
+  "name": "debug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "select": "node ./index.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
+}

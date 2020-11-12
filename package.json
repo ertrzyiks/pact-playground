@@ -8,7 +8,9 @@
     "packages/*"
   ],
   "scripts": {
-    "consumer-pact": "yarn workspace consumer test && yarn workspace consumer publish:pact",
-    "verify": "yarn workspace provider verify:pact"
+    "consumer-pact:main": "yarn workspace consumer test && env TRAVIS_COMMIT=123 TRAVIS_BRANCH=main yarn workspace consumer publish:pact",
+    "consumer-pact:production": "yarn workspace consumer test && env TRAVIS_COMMIT=456 TRAVIS_BRANCH=production yarn workspace consumer publish:pact",
+    "verify": "yarn workspace provider verify:pact",
+    "select": "yarn workspace debug select"
   }
 }
