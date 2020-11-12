@@ -1,4 +1,5 @@
 "use strict"
+const { Matchers } = require('@pact-foundation/pact')
 
 const { pactWith } = require("jest-pact")
 
@@ -6,16 +7,14 @@ const { getData } = require("../index")
 
 pactWith({ consumer: "Consumer", provider: "Provider" }, provider => {
   describe("API", () => {
-    const EXPECTED_DATA = [
-      {
-        message: "Hello world",
-      },
-    ]
+    const EXPECTED_DATA = {
+      message: Matchers.somethingLike("Hello world")
+    }
 
     const successResponse = {
       status: 200,
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json; charset=utf-8",
       },
       body: EXPECTED_DATA,
     }
@@ -44,7 +43,7 @@ pactWith({ consumer: "Consumer", provider: "Provider" }, provider => {
       return getData({
         url: provider.mockService.baseUrl,
       }).then(data => {
-        expect(data).toEqual(EXPECTED_DATA)
+        expect(data).toHaveProperty('message')
       })
     })
   })

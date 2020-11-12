@@ -4,6 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "node ./index.js",
+    "verify:pact": "node ./verify.js"
+  },
   "dependencies": {
     "@pact-foundation/pact": "^9.13.0",
     "express": "^4.17.1"
