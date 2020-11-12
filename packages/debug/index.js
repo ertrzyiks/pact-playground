@@ -10,7 +10,8 @@ axios.post('http://localhost:9292/pacts/provider/Provider/for-verification', {
   ],
   includeWipPactsSince: '2020-11-09',
   includePendingStatus: true,
-  providerVersion: 'main'
+  providerVersion: '123',
+  providerVersionTags: ['main']
 })
   .then(response => response.data)
   .then(data => {

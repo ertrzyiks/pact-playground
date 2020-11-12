@@ -23,10 +23,15 @@ after than check the pacts for verification
 yarn select
 ```
 
-returns no pacts
-```json
-{"_embedded":{"pacts":[]},"_links":{"self":{"href":"http://localhost:9292/pacts/provider/Provider/for-verification","title":"Pacts to be verified"}}}%   
+returns no pacts.
+
+
+## Creating WIP branch
+Modify the consumer test and create a feature branch:
 ```
+TRAVIS_COMMIT=123 TRAVIS_BRANCH=feature-1 yarn consumer-pact
+```
+
 
 ## Other commands
 
