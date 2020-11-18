@@ -10,6 +10,8 @@ const exec = command =>
 
 const gitSha = process.env.TRAVIS_COMMIT || exec("git rev-parse HEAD")
 
+const pactUrls = process.argv.slice(2)
+
 let opts = {
   providerBaseUrl: 'http://localhost:4001',
   provider: 'Provider',
@@ -17,12 +19,7 @@ let opts = {
   publishVerificationResult: true,
   providerVersion: gitSha,
   providerVersionTags: ['main'],
-  includeWipPactsSince: '2020-11-10',
-  enablePending: true,
-  consumerVersionSelectors: [{
-    tag: 'production',
-    latest: true
-  }]
+  pactUrls: pactUrls
 };
 
 const server = app.listen(4001, () => {

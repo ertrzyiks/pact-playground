@@ -8,7 +8,7 @@ const { getData } = require("../index")
 pactWith({ consumer: "Consumer", provider: "Provider" }, provider => {
   describe("API", () => {
     const EXPECTED_DATA = {
-      message: Matchers.somethingLike("Hello world5")
+      message: Matchers.somethingLike("Hello world")
     }
 
     const successResponse = {

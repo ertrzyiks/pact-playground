@@ -25,6 +25,11 @@ yarn select
 
 returns no pacts.
 
+## Verifying pact by URL
+
+```
+yarn verify:single [PACT URL]
+```
 
 ## Creating WIP branch
 Modify the consumer test and create a feature branch:

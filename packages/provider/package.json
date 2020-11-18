@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "start": "node ./index.js",
-    "verify:pact": "node ./verify.js"
+    "verify:pact": "node ./verify.js",
+    "verify:pact:single": "node ./verifySingle.js"
   },
   "dependencies": {
     "@pact-foundation/pact": "^9.13.0",
