@@ -42,6 +42,6 @@ TRAVIS_COMMIT=123 TRAVIS_BRANCH=feature-1 yarn consumer-pact
 
 | Command | Description |
 | ---- | --- |
-| `yarn workspace consumer test` | Create consumer pact | 
-| `yarn workspace consumer publish:pact` | Publish consumer pact | 
-| `yarn workspace provider verify:pact` | Publish consumer pact | 
+| `yarn workspace consumer run test` | Create consumer pact | 
+| `yarn workspace consumer run publish:pact` | Publish consumer pact | 
+| `yarn workspace provider run verify:pact` | Publish consumer pact | 
