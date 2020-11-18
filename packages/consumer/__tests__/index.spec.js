@@ -23,10 +23,7 @@ pactWith({ consumer: "Consumer", provider: "Provider" }, provider => {
       uponReceiving: "a request for welcome message",
       withRequest: {
         method: "GET",
-        path: "/",
-        headers: {
-          Accept: "application/json",
-        },
+        path: "/"
       },
     }
 

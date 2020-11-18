@@ -1,16 +1,7 @@
 "use strict"
 
-const axios = require("axios")
+const fetch = require('node-fetch')
 
 exports.getData = endpoint => {
-  const url = endpoint.url
-
-  return axios
-    .request({
-      method: "GET",
-      baseURL: url,
-      url: "/",
-      headers: { Accept: "application/json" },
-    })
-    .then(response => response.data)
+  return fetch(endpoint.url).then(res => res.json())
 }

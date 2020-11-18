@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@pact-foundation/pact": "^9.13.0",
-    "axios": "^0.21.0",
     "jest": "^26.6.3",
-    "jest-pact": "^0.8.1"
+    "jest-pact": "^0.8.1",
+    "node-fetch": "^2.6.1"
   }
 }

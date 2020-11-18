@@ -12,6 +12,6 @@
     "consumer-pact:production": "yarn workspace consumer test && env TRAVIS_COMMIT=456 TRAVIS_BRANCH=production yarn workspace consumer publish:pact",
     "verify": "yarn workspace provider verify:pact",
     "verify:single": "yarn workspace provider verify:pact:single",
-    "select": "yarn workspace debug select"
+    "select": "yarn workspace select select"
   }
 }
